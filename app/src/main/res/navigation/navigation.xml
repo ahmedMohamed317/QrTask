@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.task.ui.payment.PaymentFragment"
+        android:label="PaymentFragment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_QRFragment"
+            app:destination="@id/QRFragment" />
+        <argument
+            android:name="argsAuth"
+            app:argType="com.example.task.model.auth.BodyAuthentication"
+            app:nullable="false"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/QRFragment"
+        android:name="com.example.task.ui.qr.QRFragment"
+        android:label="QRFragment" >
+        <argument
+            android:name="argsAuth"
+            app:argType="com.example.task.model.auth.BodyAuthentication"
+            />
+        <argument
+            android:name="argsPayment"
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.task.ui.auth.AuthFragment"
+        android:label="authFragment"
+        >
+        <action
+            android:id="@+id/action_authFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+
+    </fragment>
+</navigation>

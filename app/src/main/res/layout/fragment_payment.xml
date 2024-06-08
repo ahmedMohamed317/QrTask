@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:splitMotionEvents="false"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/select_your_payment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:elevation="@dimen/paddingAndMargin_16"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/select_your_payment"
+        android:textColor="@color/primary_100"
+        android:textSize="@dimen/font_size_22"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/five_egp_btn"
+        style="@style/MaterialButtonStyle"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/primary_100"
+        android:enabled="true"
+        android:text="@string/five_egp"
+        android:textSize="@dimen/font_size_20"
+        app:layout_constraintBottom_toTopOf="@id/seven_egp_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_your_payment_tv" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/seven_egp_btn"
+        style="@style/MaterialButtonStyle"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/primary_100"
+        android:enabled="true"
+        android:text="@string/seven_egp"
+        android:textSize="@dimen/font_size_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_your_payment_tv" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ten_egp_btn"
+        style="@style/MaterialButtonStyle"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/primary_100"
+        android:enabled="true"
+        android:text="@string/ten_egp"
+        android:textSize="@dimen/font_size_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seven_egp_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

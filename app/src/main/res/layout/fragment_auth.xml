@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:splitMotionEvents="false"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/name_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:elevation="44dp"
+            app:drawableStartCompat="@drawable/ic_user_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/name_card"
+            app:layout_constraintStart_toStartOf="@+id/name_card"
+            app:layout_constraintTop_toTopOf="@+id/name_card" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/name_card"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="@dimen/radius_4"
+            android:hint="@string/name"
+            android:textColorHint="@color/normal_grey"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/primary_100"
+            app:errorEnabled="true"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/name_card"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:placeholderText="Enter your name"
+            app:placeholderTextColor="@color/normal_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="25"
+                android:paddingStart="40dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="@dimen/paddingAndMargin_4"
+                android:paddingBottom="10dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColorHint="@color/normal_grey"
+                android:theme="@style/AppThemeCorrectPrimaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/age_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:elevation="44dp"
+            app:drawableStartCompat="@drawable/ic_user_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/age_card"
+            app:layout_constraintStart_toStartOf="@+id/age_card"
+            app:layout_constraintTop_toTopOf="@+id/age_card" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/age_card"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameInputLayout">
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="@dimen/radius_4"
+            android:hint="Age"
+            android:textColorHint="@color/normal_grey"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/primary_100"
+            app:errorEnabled="true"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/age_card"
+            app:layout_constraintTop_toBottomOf="@+id/nameInputLayout"
+            app:placeholderText="Enter your age"
+            app:placeholderTextColor="@color/normal_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:inputType="numberSigned"
+                android:lines="1"
+                android:maxLength="2"
+                android:paddingStart="40dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="@dimen/paddingAndMargin_4"
+                android:paddingBottom="10dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColorHint="@color/normal_grey"
+                android:theme="@style/AppThemeCorrectPrimaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mobile_card"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ageInputLayout">
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobileInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="@dimen/radius_4"
+            android:hint="@string/mobile_number"
+            android:textColorHint="@color/normal_grey"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/primary_100"
+            app:errorEnabled="true"
+            android:lines="1"
+            android:maxLength="11"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/mobile_card"
+            app:layout_constraintTop_toBottomOf="@+id/ageInputLayout"
+            app:placeholderText="@string/enter_mobile_number"
+            app:placeholderTextColor="@color/normal_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:digits="0123456789"
+                android:drawableStart="@drawable/ic_smartphone"
+                android:drawablePadding="75dp"
+                android:ellipsize="end"
+                android:inputType="phone"
+                android:lines="1"
+                android:maxLines="1"
+                android:maxLength="11"
+                android:paddingStart="5dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="@dimen/paddingAndMargin_4"
+                android:paddingBottom="10dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:theme="@style/AppThemeCorrectPrimaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/country_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:elevation="@dimen/paddingAndMargin_16"
+            app:ccpDialog_allowSearch="true"
+            app:ccpDialog_initialScrollToSelection="true"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccpDialog_showFastScroller="false"
+            app:ccpDialog_showFlag="true"
+            app:ccpDialog_showNameCode="true"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccpDialog_showTitle="false"
+            app:ccp_arrowColor="@color/black"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_clickable="true"
+            app:ccp_countryAutoDetectionPref="SIM_ONLY"
+            app:ccp_rememberLastSelection="true"
+            app:ccp_selectionMemoryTag="signupCCP"
+            app:ccp_showArrow="false"
+            app:ccp_showFlag="true"
+            app:ccp_showFullName="false"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="true"
+            app:ccp_textGravity="RIGHT"
+            app:ccp_textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/mobile_card"
+            app:layout_constraintTop_toTopOf="@+id/mobile_card" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/gender_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:elevation="@dimen/paddingAndMargin_16"
+            android:visibility="visible"
+            app:drawableStartCompat="@drawable/ic_gender"
+            app:layout_constraintBottom_toBottomOf="@+id/gender_card"
+            app:layout_constraintStart_toStartOf="@+id/gender_card"
+            app:layout_constraintTop_toTopOf="@+id/gender_card" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gender_card"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:elevation="2dp"
+            android:visibility="visible"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/primary_100"
+            app:cardCornerRadius="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobileInputLayout">
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spin_genders"
+            style="@style/Subtitle1.Style"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            app:boxStrokeColor="@color/primary_100"
+            android:elevation="@dimen/paddingAndMargin_64"
+            android:visibility="visible"
+            app:boxBackgroundMode="outline"
+            app:layout_constraintEnd_toEndOf="@+id/gender_card"
+            app:layout_constraintStart_toEndOf="@+id/gender_icon"
+            app:layout_constraintTop_toTopOf="@+id/gender_card"
+            app:smsp_arrowColor="@color/normal_grey"
+            app:smsp_arrowSize="@dimen/radius_16"
+            app:smsp_enableErrorLabel="false"
+            app:smsp_floatingLabelColor="@color/normal_grey"
+            app:smsp_floatingLabelText=""
+            app:smsp_hint="Select gender"
+            app:smsp_hintColor="@color/normal_grey"
+            app:smsp_hintSize="@dimen/font_size_14"
+            app:smsp_itemColor="@color/normal_grey"
+            app:smsp_outlinedBoxColor="@color/primary_100"
+            app:smsp_itemListColor="@color/normal_grey"
+            app:smsp_itemListHintBackgroundColor="@color/normal_grey"
+            app:smsp_itemListHintColor="#FFFFFF"
+            app:smsp_multilineError="false"
+            app:smsp_selectedItemListColor="@color/normal_grey"
+            app:smsp_underlineColor="@color/white" />
+
+        <TextView
+            android:id="@+id/spinner_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/please_select_your_gender"
+            android:textColor="@color/error"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/spin_genders"
+            app:layout_constraintTop_toBottomOf="@id/spin_genders" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_btn"
+            style="@style/MaterialButtonStyle"
+            android:layout_width="270dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/primary_100"
+            android:enabled="true"
+            android:text="@string/next"
+            android:textSize="@dimen/font_size_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spin_genders" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
